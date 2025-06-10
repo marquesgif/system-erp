@@ -23,6 +23,8 @@ def login():
         else:
             st.error("Usuário ou senha incorretos")
 
+    st.info("Criado por José Lubendo")
+
 
 # ======================================================================
 
@@ -31,8 +33,10 @@ def view_dashboard():
     #st.set_page_config(page_title="Dashboard Interativo", layout='wide')
 
     st.sidebar.title("⚙️ Filtros")
+
     arquivo = st.file_uploader("📁 Envie um arquivo csv", type=["csv"])
     st.title("📊 Análise de Dados com layout interativo")
+
 
     if arquivo is not None:
         df = pd.read_csv(arquivo)
@@ -69,6 +73,9 @@ def view_dashboard():
 
     else:
         st.info("Por favor, envie um arquivo csv para iniciar")
+
+    st.sidebar.info("Criado por José Lubendo")
+
 
 
 #======================================================================
